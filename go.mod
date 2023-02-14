@@ -51,7 +51,7 @@ require (
 	github.com/Masterminds/sprig v2.22.0+incompatible
 	github.com/ahmetb/gen-crd-api-reference-docs v0.1.5
 	github.com/aokoli/goutils v1.1.0
-	github.com/aws/aws-sdk-go v1.30.16
+	github.com/aws/aws-sdk-go v1.34.0
 	github.com/cenkalti/backoff v2.2.1+incompatible // indirect
 	github.com/chai2010/gettext-go v0.0.0-20170215093142-bf70f2a70fb1 // indirect
 	github.com/containerd/cgroups v0.0.0-20191011165608-5fbad35c2a7e // indirect

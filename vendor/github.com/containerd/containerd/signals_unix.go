@@ -1,3 +1,4 @@
+//go:build aix || darwin || dragonfly || freebsd || linux || netbsd || openbsd || solaris
 // +build aix darwin dragonfly freebsd linux netbsd openbsd solaris
 
 /*
@@ -33,11 +34,7 @@ import (
 func ParseSignal(rawSignal string) (syscall.Signal, error) {
 	s, err := strconv.Atoi(rawSignal)
 	if err == nil {
-		signal := syscall.Signal(s)
-		if unix.SignalName(signal) != "" {
-			return signal, nil
-		}
-		return -1, fmt.Errorf("unknown signal %q", rawSignal)
+		return syscall.Signal(s), nil
 	}
 	signal := unix.SignalNum(strings.ToUpper(rawSignal))
 	if signal == 0 {

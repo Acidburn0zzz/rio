@@ -84,7 +84,7 @@ require (
 	github.com/rancher/gitwatcher v0.4.5
 	github.com/rancher/norman v0.0.0-20191114233102-966e8db9e670
 	github.com/rancher/rdns-server v0.5.7-0.20190927164127-7128efe7d065
-	github.com/rancher/wrangler v0.2.1-0.20191205190617-661f00f286d2
+	github.com/rancher/wrangler v0.7.4-security1
 	github.com/rancher/wrangler-api v0.2.1-0.20191015045805-d3635aa0853a
 	github.com/sclevine/spec v1.4.0
 	github.com/sirupsen/logrus v1.4.2
@@ -102,9 +102,9 @@ require (
 	gotest.tools v2.2.0+incompatible
 	istio.io/api v0.0.0-20200518203817-6d29a38039bd
 	istio.io/client-go v0.0.0-20200528222059-5465d5e00a32
-	k8s.io/api v0.18.1
+	k8s.io/api v0.18.8
 	k8s.io/apiextensions-apiserver v0.18.0
-	k8s.io/apimachinery v0.18.1
+	k8s.io/apimachinery v0.18.8
 	k8s.io/apiserver v0.0.0
 	k8s.io/cli-runtime v0.17.3
 	k8s.io/client-go v11.0.1-0.20190805182717-6502b5e7b1b5+incompatible

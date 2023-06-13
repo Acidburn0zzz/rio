@@ -555,6 +555,13 @@ github.com/rancher/gitwatcher/pkg/generated/informers/externalversions/gitwatche
 github.com/rancher/gitwatcher/pkg/generated/informers/externalversions/gitwatcher.cattle.io/v1
 github.com/rancher/gitwatcher/pkg/generated/informers/externalversions/internalinterfaces
 github.com/rancher/gitwatcher/pkg/generated/listers/gitwatcher.cattle.io/v1
+# github.com/rancher/lasso v0.0.0-20200905045615-7fcb07d6a20b
+github.com/rancher/lasso/pkg/cache
+github.com/rancher/lasso/pkg/client
+github.com/rancher/lasso/pkg/controller
+github.com/rancher/lasso/pkg/log
+github.com/rancher/lasso/pkg/mapper
+github.com/rancher/lasso/pkg/scheme
 # github.com/rancher/norman v0.0.0-20191114233102-966e8db9e670
 github.com/rancher/norman/pkg/data
 github.com/rancher/norman/pkg/debug
@@ -570,7 +577,7 @@ github.com/rancher/norman/pkg/types/values
 # github.com/rancher/rdns-server v0.5.7-0.20190927164127-7128efe7d065
 github.com/rancher/rdns-server/client
 github.com/rancher/rdns-server/model
-# github.com/rancher/wrangler v0.2.1-0.20191205190617-661f00f286d2
+# github.com/rancher/wrangler v0.7.4-security1
 github.com/rancher/wrangler/pkg/apply
 github.com/rancher/wrangler/pkg/apply/injectors
 github.com/rancher/wrangler/pkg/cleanup
@@ -579,6 +586,8 @@ github.com/rancher/wrangler/pkg/controller-gen
 github.com/rancher/wrangler/pkg/controller-gen/args
 github.com/rancher/wrangler/pkg/controller-gen/generators
 github.com/rancher/wrangler/pkg/crd
+github.com/rancher/wrangler/pkg/data
+github.com/rancher/wrangler/pkg/data/convert
 github.com/rancher/wrangler/pkg/generic
 github.com/rancher/wrangler/pkg/genericcondition
 github.com/rancher/wrangler/pkg/gvk
@@ -588,7 +597,11 @@ github.com/rancher/wrangler/pkg/leader
 github.com/rancher/wrangler/pkg/merr
 github.com/rancher/wrangler/pkg/name
 github.com/rancher/wrangler/pkg/objectset
+github.com/rancher/wrangler/pkg/patch
 github.com/rancher/wrangler/pkg/relatedresource
+github.com/rancher/wrangler/pkg/schemas
+github.com/rancher/wrangler/pkg/schemas/definition
+github.com/rancher/wrangler/pkg/schemas/openapi
 github.com/rancher/wrangler/pkg/schemes
 github.com/rancher/wrangler/pkg/signals
 github.com/rancher/wrangler/pkg/slice
@@ -755,7 +768,7 @@ github.com/solo-io/solo-kit/pkg/stats
 github.com/solo-io/solo-kit/pkg/utils/fileutils
 github.com/solo-io/solo-kit/pkg/utils/kubeutils
 github.com/solo-io/solo-kit/pkg/utils/protoutils
-# github.com/spf13/cobra v0.0.6
+# github.com/spf13/cobra v1.0.0
 github.com/spf13/cobra
 # github.com/spf13/pflag v1.0.5
 github.com/spf13/pflag
@@ -882,6 +895,10 @@ golang.org/x/text/width
 golang.org/x/time/rate
 # golang.org/x/tools v0.0.0-20200522201501-cb1345f3a375
 golang.org/x/tools/go/ast/astutil
+golang.org/x/tools/go/gcexportdata
+golang.org/x/tools/go/internal/gcimporter
+golang.org/x/tools/go/internal/packagesdriver
+golang.org/x/tools/go/packages
 golang.org/x/tools/imports
 golang.org/x/tools/internal/event
 golang.org/x/tools/internal/event/core
@@ -891,6 +908,7 @@ golang.org/x/tools/internal/fastwalk
 golang.org/x/tools/internal/gocommand
 golang.org/x/tools/internal/gopathwalk
 golang.org/x/tools/internal/imports
+golang.org/x/tools/internal/packagesinternal
 # golang.org/x/xerrors v0.0.0-20191204190536-9bdfabe68543
 golang.org/x/xerrors
 golang.org/x/xerrors/internal
@@ -1007,7 +1025,7 @@ istio.io/api/networking/v1alpha3
 istio.io/client-go/pkg/apis/networking/v1alpha3
 # istio.io/gogo-genproto v0.0.0-20191009201739-17d570f95998
 istio.io/gogo-genproto/googleapis/google/api
-# k8s.io/api v0.18.1 => github.com/rancher/kubernetes/staging/src/k8s.io/api v1.16.2-k3s.1
+# k8s.io/api v0.18.8 => github.com/rancher/kubernetes/staging/src/k8s.io/api v1.16.2-k3s.1
 k8s.io/api/admission/v1
 k8s.io/api/admission/v1beta1
 k8s.io/api/admissionregistration/v1
@@ -1067,7 +1085,7 @@ k8s.io/apiextensions-apiserver/pkg/client/informers/externalversions/apiextensio
 k8s.io/apiextensions-apiserver/pkg/client/informers/externalversions/internalinterfaces
 k8s.io/apiextensions-apiserver/pkg/client/listers/apiextensions/v1
 k8s.io/apiextensions-apiserver/pkg/client/listers/apiextensions/v1beta1
-# k8s.io/apimachinery v0.18.1 => github.com/rancher/kubernetes/staging/src/k8s.io/apimachinery v1.16.2-k3s.1
+# k8s.io/apimachinery v0.18.8 => github.com/rancher/kubernetes/staging/src/k8s.io/apimachinery v1.16.2-k3s.1
 k8s.io/apimachinery/pkg/api/equality
 k8s.io/apimachinery/pkg/api/errors
 k8s.io/apimachinery/pkg/api/meta
@@ -1143,6 +1161,7 @@ k8s.io/cli-runtime/pkg/resource
 # k8s.io/client-go v11.0.1-0.20190805182717-6502b5e7b1b5+incompatible => github.com/rancher/kubernetes/staging/src/k8s.io/client-go v1.16.2-k3s.1
 k8s.io/client-go/discovery
 k8s.io/client-go/discovery/cached/disk
+k8s.io/client-go/discovery/cached/memory
 k8s.io/client-go/discovery/fake
 k8s.io/client-go/dynamic
 k8s.io/client-go/informers

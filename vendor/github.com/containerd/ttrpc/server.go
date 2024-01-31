@@ -18,14 +18,15 @@ package ttrpc
 
 import (
 	"context"
+	"errors"
 	"io"
 	"math/rand"
 	"net"
 	"sync"
 	"sync/atomic"
+	"syscall"
 	"time"
 
-	"github.com/pkg/errors"
 	"github.com/sirupsen/logrus"
 	"google.golang.org/grpc/codes"
 	"google.golang.org/grpc/status"
@@ -209,6 +210,20 @@ func (s *Server) addConnection(c *serverConn) {
 	s.connections[c] = struct{}{}
 }
 
+func (s *Server) delConnection(c *serverConn) {
+	s.mu.Lock()
+	defer s.mu.Unlock()
+
+	delete(s.connections, c)
+}
+
+func (s *Server) countConnection() int {
+	s.mu.Lock()
+	defer s.mu.Unlock()
+
+	return len(s.connections)
+}
+
 func (s *Server) closeIdleConns() bool {
 	s.mu.Lock()
 	defer s.mu.Unlock()
@@ -313,6 +328,7 @@ func (c *serverConn) run(sctx context.Context) {
 	defer c.conn.Close()
 	defer cancel()
 	defer close(done)
+	defer c.server.delConnection(c)
 
 	go func(recvErr chan error) {
 		defer close(recvErr)
@@ -452,14 +468,12 @@ func (c *serverConn) run(sctx context.Context) {
 			// branch. Basically, it means that we are no longer receiving
 			// requests due to a terminal error.
 			recvErr = nil // connection is now "closing"
-			if err == io.EOF || err == io.ErrUnexpectedEOF {
+			if errors.Is(err, io.EOF) || errors.Is(err, io.ErrUnexpectedEOF) || errors.Is(err, syscall.ECONNRESET) {
 				// The client went away and we should stop processing
 				// requests, so that the client connection is closed
 				return
 			}
-			if err != nil {
-				logrus.WithError(err).Error("error receiving message")
-			}
+			logrus.WithError(err).Error("error receiving message")
 		case <-shutdown:
 			return
 		}

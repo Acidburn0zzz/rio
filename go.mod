@@ -54,31 +54,26 @@ require (
 	github.com/aws/aws-sdk-go v1.30.16
 	github.com/cenkalti/backoff v2.2.1+incompatible // indirect
 	github.com/chai2010/gettext-go v0.0.0-20170215093142-bf70f2a70fb1 // indirect
-	github.com/containerd/cgroups v0.0.0-20191011165608-5fbad35c2a7e // indirect
-	github.com/containerd/console v0.0.0-20181022165439-0650fd9eeb50
-	github.com/containerd/containerd v1.3.3
-	github.com/containerd/fifo v0.0.0-20190816180239-bda0ff6ed73c // indirect
-	github.com/containerd/ttrpc v0.0.0-20191025122922-cf7f4d5f2d61 // indirect
+	github.com/containerd/console v1.0.3
+	github.com/containerd/containerd v1.6.26
 	github.com/davecgh/go-spew v1.1.1
 	github.com/deislabs/smi-sdk-go v0.1.0
 	github.com/docker/distribution v2.7.1+incompatible
 	github.com/docker/docker v1.14.0-0.20190319215453-e7b5f7dbe98c
-	github.com/docker/go-events v0.0.0-20190806004212-e31b211e4f1c // indirect
 	github.com/docker/go-units v0.4.0
 	github.com/drone/envsubst v1.0.2
 	github.com/fatih/color v1.9.0
 	github.com/go-acme/lego v2.5.0+incompatible
 	github.com/go-acme/lego/v3 v3.1.0
 	github.com/go-bindata/go-bindata v3.1.2+incompatible
-	github.com/gogo/protobuf v1.3.1
+	github.com/gogo/protobuf v1.3.2
 	github.com/hashicorp/go-rootcerts v1.0.2 // indirect
 	github.com/hashicorp/vault/api v1.0.5-0.20200117231345-460d63e36490 // indirect
 	github.com/hashicorp/vault/sdk v0.1.14-0.20200121232954-73f411823aa0 // indirect
 	github.com/linkerd/linkerd2 v0.0.0-20191010175117-1039d8254738
-	github.com/mattn/go-shellwords v1.0.9
+	github.com/mattn/go-shellwords v1.0.12
 	github.com/moby/buildkit v0.6.2
-	github.com/onsi/ginkgo v1.11.0
-	github.com/opentracing/opentracing-go v1.1.0 // indirect
+	github.com/onsi/ginkgo v1.16.4
 	github.com/pkg/browser v0.0.0-20180916011732-0a3d74bf9ce4
 	github.com/pkg/errors v0.9.1
 	github.com/rancher/gitwatcher v0.4.5
@@ -87,25 +82,24 @@ require (
 	github.com/rancher/wrangler v0.2.1-0.20191205190617-661f00f286d2
 	github.com/rancher/wrangler-api v0.2.1-0.20191015045805-d3635aa0853a
 	github.com/sclevine/spec v1.4.0
-	github.com/sirupsen/logrus v1.4.2
+	github.com/sirupsen/logrus v1.9.3
 	github.com/solo-io/gloo v1.4.6
 	github.com/solo-io/solo-kit v0.13.8
-	github.com/stretchr/testify v1.5.1
+	github.com/stretchr/testify v1.8.4
 	github.com/tektoncd/pipeline v0.14.3
 	github.com/urfave/cli v1.22.2
 	github.com/wercker/stern v1.11.0
-	golang.org/x/crypto v0.0.0-20200323165209-0ec3e9974c59
-	golang.org/x/sync v0.0.0-20200317015054-43a5402ce75a
+	golang.org/x/crypto v0.14.0
+	golang.org/x/sync v0.3.0
 	gopkg.in/inf.v0 v0.9.1
-	gopkg.in/square/go-jose.v2 v2.4.1 // indirect
-	gopkg.in/yaml.v2 v2.3.0
+	gopkg.in/yaml.v2 v2.4.0
 	gotest.tools v2.2.0+incompatible
 	istio.io/api v0.0.0-20200518203817-6d29a38039bd
 	istio.io/client-go v0.0.0-20200528222059-5465d5e00a32
-	k8s.io/api v0.18.1
+	k8s.io/api v0.22.5
 	k8s.io/apiextensions-apiserver v0.18.0
-	k8s.io/apimachinery v0.18.1
-	k8s.io/apiserver v0.0.0
+	k8s.io/apimachinery v0.22.5
+	k8s.io/apiserver v0.22.5
 	k8s.io/cli-runtime v0.17.3
 	k8s.io/client-go v11.0.1-0.20190805182717-6502b5e7b1b5+incompatible
 	k8s.io/klog v1.0.0
